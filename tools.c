@@ -23,7 +23,7 @@ int     int_checker(char *str)
     return (0);
 }
 
-int     filter_args(int arg, char *argv, t_lista *list)
+int     filter_args(int argi, char *argv, t_lista *list)
 {
     t_stack *temp;
 
@@ -39,7 +39,7 @@ int     filter_args(int arg, char *argv, t_lista *list)
     {
         if (ft_atoi(argv) < -217478368 || ft_atoi(argv) > 217478367)
             return (1);
-        if (arg)
+        if (argi)
             list->a->next = ft_newintlist();
         list->a->data = (ft_atoi(argv));
         list->a->no = -2;
